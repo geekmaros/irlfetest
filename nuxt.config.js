@@ -47,6 +47,13 @@ export default {
         // 'https://rickandmortyapi.com/graphql/'
         // 'https://web.api.irl.com/.netlify/functions/graphql/'
         httpEndpoint: 'https://web.api.irl.com/.netlify/functions/graphql/',
+        httpLinkOptions: {
+          fetchOptions: {
+            mode: 'cors', //Cors Needed for external Cross origins, need to allow headers from server
+          },
+          credentials: 'omit', //must be omit to support application/json content type
+        },
+
       },
     },
   },
